@@ -1,6 +1,6 @@
 const uploadFile = require("../middleware/upload");
 const fs = require("fs");
-const baseUrl = "http://localhost:8080/files/";
+const baseUrl = "https://storage.extraa.in/files";
 
 const upload = async (req, res) => {
   try {
@@ -12,6 +12,7 @@ const upload = async (req, res) => {
 
     res.status(200).send({
       message: "Uploaded the file successfully: " + req.file.originalname,
+      url: baseUrl + req.file.originalname,
     });
   } catch (err) {
     console.log(err);

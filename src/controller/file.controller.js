@@ -1,6 +1,6 @@
 const uploadFile = require("../middleware/upload");
 const fs = require("fs");
-const baseUrl = "https://storage.extraa.in/files";
+const baseUrl = "https://storage.extraa.in/files/";
 
 const upload = async (req, res) => {
   try {
